@@ -444,7 +444,7 @@ footer {
    }
    .platforms {
       flex-direction: row;
-      gap: 0;
+      gap: 10px;
    }
    .platforms__consoles, 
    .platforms__laptops {
