@@ -217,6 +217,7 @@ label {
    justify-content: space-evenly;
    gap: 20px;
    text-align: center;
+   padding: 2em;
 }
 
 .platforms__consoles, 
