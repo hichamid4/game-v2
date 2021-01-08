@@ -269,6 +269,7 @@ label {
    background-size: cover;
    background-blend-mode: overlay;
 }
+
 .games-showcase header {
    max-width: 500px;
    margin: 0 auto;
@@ -394,12 +395,24 @@ footer {
    font-size: 2em;
 }
 
+.fa-facebook:hover {
+   color: #3969cf;
+}
 
+.fa-twitter:hover {
+   color: #00acee;
+}
+
+.fa-instagram:hover {
+     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+     background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
 
 
 @media only screen and (min-width: 756px) {
    header {
-      padding: .3em;
+      padding: 0;
    }
    nav {
       justify-content: space-between;
@@ -480,6 +493,6 @@ footer {
       flex-wrap: wrap;
       justify-content: center;
       max-width: 400px;
-      margin: 5px auto;
+      margin: 0 auto;
    }
 }

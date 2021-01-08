@@ -1,0 +1,387 @@
+/* =====
+   fonts 
+   ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* ======
+   Layout
+   ====== */
+   
+/* color text  ==> #f5f5f5 */
+/* color primary  ==> #121212 */
+/* color accent  ==> #2a2a2a */
+   
+/* ff-text ==> sans-serif */
+/* ff-title/text ==> 'Rubik', sans-serif */
+
+   
+   
+*,
+*::after,
+*::before {
+   box-sizing: inherit;
+}
+   
+html {
+   box-sizing: border-box;
+   color: #f5f5f5;
+   font-size: 1.25rem;
+}
+   
+body {
+   font-family: sans-serif;
+   margin: 0;
+   background: #121212;
+   font-weight: 300;
+}
+   
+img {
+   display: block;
+}
+
+/* ===========
+   typographie
+   =========== */
+a {
+   text-decoration: none;
+   color: inherit;
+   font-family: 'Rubik', sans-serif;
+}
+
+/* ================== 
+   sign up page style
+   ================== */
+
+header {
+   padding: .5em;
+   background-color: #2a2a2a;
+}
+
+nav {
+   display: flex;
+   align-items: center;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.logo {
+   height: 40px;
+   width: 102px
+}
+
+nav .ul__nav {
+   box-shadow: 0 .5px 2px rgba(0,0,0, 0.5);
+   display: flex;
+   flex-direction: column;
+   background-color: #1a1a1a;
+   position: absolute;
+   top: 60px;
+   left: -100%;
+   width: 100%;
+   height: 100vh;
+   align-items: center;
+   transition: all 300ms ease-in-out;
+}
+
+.nav-btn #btn,
+.nav-btn #cancel {
+   font-size: 1.5rem;
+   color: #f5f5f5;
+}
+
+
+.nav-btn {
+   position: relative;
+   z-index: ;
+}
+
+.ps{
+   position: absolute;
+   bottom: -11px;
+   top: -19px;
+   right: 0px
+}
+
+.ps:hover {
+   cursor: pointer;
+}
+
+#check {
+   display: none;
+}
+
+#cancel {
+   display: none;
+}
+
+#check:checked ~ .ul__nav {
+   left: 0;
+   z-index: 5;
+}
+
+#check:checked ~ .nav-btn #btn {
+   display: none;
+}
+
+#check:checked ~ .nav-btn #cancel {
+   display: block;
+}
+
+.li__nav + .li__nav{
+   margin-top: .5em;
+}
+
+.li__nav a{
+   display: inline-block;
+   padding: 1.5em;
+   font-size: 1.2rem;
+   position: relative;
+}
+
+.li__nav a::after {
+   content: '';
+   position: absolute;
+   bottom: 20px;
+   left: 25px;
+   width: 60%;
+   height: 4px;
+   background-color: #0078f2;
+   transform: scaleX(0);
+   transition: transform 250ms ease-in-out;
+   transform-origin: right;
+}
+
+.li__nav a:hover::after {
+   transform-origin: left;
+   transform: scaleX(1);
+}
+
+
+.login-wrapper {
+   background: url(../pic/hero-bg.jpg) no-repeat center;
+   background-size: cover;
+   height: calc(100vh - 212.7px);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.form {
+   position: relative;
+   width: 100%;
+   max-width: 300px;
+   padding:  80px 40px 40px;
+   background-color:rgba(0,0,0, 0.7);
+   border-radius: 10px;
+   color: #fff;
+   box-shadow: 0 15px 25px rgba(0,0,0, 0.5);
+}
+
+.form::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 50%;
+   height: 100%;
+   background-color: rgba(255,255,255, 0.08);
+   border-top-left-radius: 10px;
+   border-bottom-left-radius: 10px;
+   pointer-events: none;
+}
+
+.form i {
+   position: absolute;
+   top: -25px;
+   left: calc(50% - 25px);
+   font-size: 50px;
+   background-color: #0078f2;
+   border-radius: 50%;
+}
+
+.form h2 {
+   text-align: center;
+   letter-spacing: 1px;
+   margin-bottom: 2rem;
+   color: #0078f2;
+   font-weight: 600;
+   font-size: 1.2rem;
+}
+
+.form .input-group {
+   position: relative;
+}
+
+.form .input-group input {
+   width: 100%;
+   padding: 5px 0;
+   font-size: 1rem;
+   letter-spacing: 1px;
+   margin-bottom: 40px;
+   border: none;
+   border-bottom: 1px solid white;
+   outline: none;
+   background-color: transparent;
+   color: inherit;
+}
+
+.form .input-group label {
+   position: absolute;
+   top: 0;
+   left: 0;
+   padding: 5px 0;
+   font-size: 16px;
+   pointer-events: none;
+   transition: .2s ease-out;
+}
+
+.form .input-group input:focus + label,
+.form .input-group input:focus + label {
+   transform: translateY(-18px);
+   color: #0078f2;
+   font-size: .6rem;
+}
+
+.submit-btn {
+   display: block;
+   margin-left: auto;
+   border: none;
+   outline: none;
+   background: #0078f2;
+   font-size: 16px;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   padding: 10px 15px;
+   font-weight: 400;
+   color: white;
+   border-radius: 5px;
+   cursor: pointer;
+   font-family: 'Rubik', sans-serif;
+}
+
+.forgot-pw {
+   color: inherit;
+   font-size: 12px;
+   font-weight: 400;
+}
+
+#forgot-pw {
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   top: 0;
+   left: 0;
+   height: 0;
+   width: 100%;
+   z-index: 1;
+   background: white;
+   opacity: 0;
+   transition: .6s;
+}
+
+#forgot-pw:target {
+   height: 100%;
+   width: 100%;
+   opacity: 1;
+}
+
+.close {
+   position: absolute;
+   right: 1.5rem;
+   top: 0.5rem;
+   font-size: 32px;
+   font-weight: 900;
+   text-decoration: none;
+}
+
+footer {
+   background: #7a7a7a;
+}
+   
+.footer-container {
+   background-color: #7a7a7a;
+   display: flex;
+   flex-direction: column;
+   padding: 1em;
+}
+   
+.social-btn {
+   display: flex;
+   flex-direction: row;
+   gap: 40px;
+   justify-content: center;
+   padding: 1em 0 1em;
+}
+   
+.social-link {
+   display: inline-block;
+   font-size: 2em;
+   color: white;
+}
+   
+.fa-facebook:hover {
+   color: #3969cf;
+}
+   
+.fa-twitter:hover {
+   color: #00acee;
+}
+   
+.fa-instagram:hover {
+   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+   background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+
+@media only screen and (min-width: 756px) {
+   header {
+      padding: 0;
+   }
+   nav {
+      justify-content: space-between;
+   }
+   .nav-btn {
+      display: none;
+   }
+   nav .ul__nav {
+      box-shadow: none;
+      display: flex;
+      flex-direction: row;
+      position: static;
+      height: auto;
+      width: auto;
+      background-color: transparent;
+      align-items: center;
+   }
+   .li__nav a{
+      display: block;
+      padding: 1.1em .5em;
+      font-size: .8rem;
+      position: relative;
+   }
+   .li__nav + .li__nav{
+      margin: 0;
+   }
+   .li__nav a::after {
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 100%;
+   }
+
+   .form {
+      max-width: 380px;
+   }
+
+   .footer-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 400px;
+      margin: 0 auto;
+   }
+}
