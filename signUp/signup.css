@@ -238,7 +238,7 @@ nav .ul__nav {
 }
 
 .form .input-group input:focus + label,
-.form .input-group input:focus + label {
+.form .input-group input:valid + label {
    transform: translateY(-18px);
    color: #0078f2;
    font-size: .6rem;
