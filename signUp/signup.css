@@ -237,8 +237,8 @@ nav .ul__nav {
    transition: .2s ease-out;
 }
 
-.form .input-group input:focus + label, 
-.form .input-group input:valid + label {
+.form .input-group input:valid + label, 
+.form .input-group input:focus + label {
    transform: translateY(-18px);
    color: #0078f2;
    font-size: .6rem;
